@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# class for calculate
 class Task9Controller < ApplicationController
   def input; end
 
@@ -6,7 +9,7 @@ class Task9Controller < ApplicationController
     respond_to do |format|
       format.json do
         render json:
-        {type: @digits.class.to_s, value: @digits}
+        { type: @digits.class.to_s, value: @digits }
       end
     end
   end
@@ -22,5 +25,4 @@ class Task9Controller < ApplicationController
   def armstrong?(number)
     number.digits.sum { |x| x**number.digits.size } == number
   end
-
 end
