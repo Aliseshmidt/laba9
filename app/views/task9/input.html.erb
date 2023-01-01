@@ -1,0 +1,8 @@
+<h1>Task9#input</h1>
+<%= form_tag("/task9/output", :method => "get", remote: true, id: 'calc_form') do %>
+<%= label_tag("Input quantity of numbers:") %>
+<%= number_field_tag(:digit, nil, min: 1) %>
+<%= submit_tag("Enter") %>
+<% end %>
+<br/>
+<div id="result"></div>
